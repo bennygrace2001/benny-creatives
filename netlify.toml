@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Note for Netlify Deploy Error (Host key verification failed):
+# This error typically occurs when the repository has Git submodules 
+# configured with SSH URLs (git@github.com:...). 
+# To fix this, convert submodule URLs to HTTPS in .gitmodules:
+# replace git@github.com:owner/repo.git with https://github.com/owner/repo.git
+# Or ensure Netlify has the correct deploy keys if the repo is private.
